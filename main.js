@@ -33,15 +33,15 @@ if(numGiocatore >= 1 && numGiocatore <= 5){
 
 
 if(numeroValido){ //numeroValido == true
-    //genera funziona numero random da 1 a 5
+    
     var numeroGenerato = numeroRandom();
     console.log("il numero generato è:", numeroGenerato);
     
-    // somma i due numeri
+    
     var numeroSommato = somma(numGiocatore, numeroGenerato);
     console.log("la somma di " + numGiocatore + " + " + numeroGenerato + " = " + numeroSommato);
 
-    //stabilisce se la somma è pari o dispari
+    
     var risultato = pariDispari(numeroSommato);
     if(risultato === rispostaGiocatore){
         console.log("Complimenti, hai vinto!");
@@ -50,15 +50,17 @@ if(numeroValido){ //numeroValido == true
     }
 }
 
-
+//genera funziona numero random da 1 a 5
 function numeroRandom(){
     return Math.floor(Math.random() * 5) + 1;
 }
 
+// somma i due numeri
 function somma(num1, num2){
     return num1 + num2;
 }
 
+//stabilisce se la somma è pari o dispari
 function pariDispari(num){
     if(num % 2 == 0){
         return "pari";
